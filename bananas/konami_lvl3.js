@@ -16,7 +16,8 @@ var Konami = function (callback) {
 			if (obj.addEventListener)
 				obj.addEventListener(type, fn, false);
 			else if (obj.attachEvent) {
-					obj["e" + type + fn] = fn;
+				// IE
+				obj["e" + type + fn] = fn;
 				obj[type + fn] = function () {
 					obj["e" + type + fn](window.event, ref_obj);
 				}
@@ -101,17 +102,4 @@ var Konami = function (callback) {
 	}
 
 	return konami;
-};	
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
-
+};
