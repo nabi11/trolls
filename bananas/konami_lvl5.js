@@ -25,7 +25,7 @@ var Konami = function (callback) {
 			}
 		},
 		input: "",
-		pattern: "659069828489",
+		pattern: "48494948494849",
 		load: function (link) {
 			this.addEvent(document, "keydown", function (e, ref_obj) {
 				if (ref_obj) konami = ref_obj; // IE
